@@ -1,0 +1,42 @@
+.header {
+    padding: 10px 0;
+    background-color: $extra-light;
+		&__wrapper {
+			display: flex;
+			align-items: center;
+		}
+		&__logo {
+			display: flex;
+			text-decoration: none;
+			margin-right: 20px;
+		}
+    &__title {
+        margin: 0;
+        color: #262626;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    &__subtitle {
+        margin: 0;
+        font-size: 11px;
+				font-weight: 600;
+        line-height: normal;
+        color: #818389;
+        margin-right: 35px;
+    }
+    &__input {
+        width: 300px;
+				border: 1px solid $base-border;
+    }
+		&__input::placeholder {
+			color: $secondary-text;
+			font-size: 14px;
+			font-weight: 400;
+		}
+    &__dropdown {
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+        margin-left: auto;
+    }
+}
