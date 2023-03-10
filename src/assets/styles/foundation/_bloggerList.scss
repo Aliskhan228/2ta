@@ -24,4 +24,10 @@
 		margin-left: auto;
 		height: 32px;
 	}
+	&__bloggers {
+		display: grid;
+		grid-template-columns: auto;
+		gap: 16px;
+		margin-top: 24px;
+	}
 }

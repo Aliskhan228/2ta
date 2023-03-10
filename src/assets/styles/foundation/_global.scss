@@ -12,3 +12,14 @@
 .bold-text {
   font-weight: 700;
 }
+.filter-tag {
+	padding: 0 8px;
+	margin: 0;
+	list-style-type: none;
+	color: $main-primary;
+	font-size: 12px;
+	font-weight: 400;
+	border: 1px solid rgba(141, 192, 255, 1);
+	border-radius: 2px;
+	background-color: rgba(223, 237, 255, 1);
+}
