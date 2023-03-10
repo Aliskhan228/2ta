@@ -1,6 +1,6 @@
 .header {
     padding: 10px 0;
-    background-color: $extra-light;
+    background-color: $background-extra-light;
 		&__wrapper {
 			display: flex;
 			align-items: center;
@@ -29,7 +29,7 @@
     }
 		&__input::placeholder {
 			color: $secondary-text;
-			font-size: 14px;
+			font-size: $average-font-size;
 			font-weight: 400;
 		}
     &__dropdown {

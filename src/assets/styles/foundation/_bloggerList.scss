@@ -1,0 +1,27 @@
+.blogger-list {
+  padding: 0 0 44px 0;
+	background-color: $background-extra-light;
+	&__topbar {
+		display: flex;
+		align-items: center;
+	}
+	&__found {
+		font-size: $average-font-size;
+		font-weight: 400;
+		color: $primary-text;
+		margin-bottom: 0;
+	}
+	&__upload-button {
+		font-size: $average-font-size;
+		font-weight: 600;
+		margin-left: 20px;
+		border-radius: 4px;
+		height: 32px;
+		padding: 0 16px;
+	}
+	&__sort {
+		width: 250px;
+		margin-left: auto;
+		height: 32px;
+	}
+}
