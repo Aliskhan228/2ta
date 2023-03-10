@@ -1,0 +1,29 @@
+.youtube-card {
+    .ant-card-meta {
+        .ant-card-meta-detail {
+            display: flex;
+            justify-content: space-between;
+
+            .ant-card-meta-description {
+                .youtube-card-description {
+                    max-width: 300px;
+                    overflow: hidden;
+
+                    .text {
+                        height: 70px;
+                        overflow: hidden;
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        background-image: linear-gradient(to bottom, #000, #000, rgba(0, 0, 0, 0));
+                    }
+                }
+            }
+        }
+    }
+
+    .youtube-card-data {
+        display: flex;
+        justify-content: space-between;
+    }
+}
