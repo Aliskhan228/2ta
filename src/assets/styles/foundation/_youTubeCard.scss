@@ -1,29 +1,95 @@
-.youtube-card {
-    .ant-card-meta {
-        .ant-card-meta-detail {
-            display: flex;
-            justify-content: space-between;
-
-            .ant-card-meta-description {
-                .youtube-card-description {
-                    max-width: 300px;
-                    overflow: hidden;
-
-                    .text {
-                        height: 70px;
-                        overflow: hidden;
-                        color: transparent;
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        background-image: linear-gradient(to bottom, #000, #000, rgba(0, 0, 0, 0));
-                    }
-                }
-            }
-        }
-    }
-
-    .youtube-card-data {
-        display: flex;
-        justify-content: space-between;
-    }
+.blogger-list {
+	.ant-card-meta-detail {
+		display: flex;
+		justify-content: space-between;
+	}
+	.ant-card-body {
+		padding: 0;
+	}
+	&__card {
+		padding: 16px 64px 20px 20px;
+		margin-top: 16px;
+		border-radius: 8px;
+	}
+	&__card:first-child {
+		margin-top: 0;
+	}
+	&__card-top {
+	}
+	&__card-avatar {
+		height: 52px;
+		width: 52px;
+	}
+	&__card-name {
+		display: flex;
+		align-items: center;
+	}
+	&__card-name h2 {
+		font-size: $average-font-size;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	&__card-name .remove-icon {
+		margin: 2px 0 0 5px;
+		cursor: pointer;
+	}
+	&__card-tags {
+		margin-top: 8px;
+	}
+	&__card-description {
+		display: flex;
+		align-items: center;
+		max-width: 340px;
+		width: 100%;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	&__card-description-text {
+		height: 50px;
+		line-height: 16px;
+		overflow: hidden;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-image: linear-gradient(
+			to bottom,
+			rgba(129, 131, 137, 1),
+			rgba(129, 131, 137, 1),
+			rgba(129, 131, 137, 0.3)
+		);
+	}
+	&__card-popover {
+		width: 340px;
+		color: $primary-text;
+	}
+	&__card-popover-title {
+		font-size: $average-font-size;
+		font-weight: 600;
+		margin: 12px 0;
+	}
+	&__card-popover-text {
+		font-size: 12px;
+		font-weight: 400;
+		width: 420px;
+	}
+	&__card-data {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__card-data-items {
+		display: flex;
+		gap: 80px;
+		margin-top: 26px;
+	}
+	&__card-buttons {
+		display: flex;
+		gap: 8px;
+		margin-top: 32px;
+	}
+	&__card-btn {
+		font-size: $average-font-size;
+		font-weight: 600;
+		border-radius: 4px;
+		padding: 0 17px;
+	}
 }

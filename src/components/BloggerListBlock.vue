@@ -16,6 +16,26 @@
           </a-button>
           <a-select class="blogger-list__sort" placeholder="По количеству просмотров"></a-select>
         </div>
+
+        <a-list
+          class="blogger-list__bloggers demo-loadmore-list"
+          :loading="initLoading"
+          item-layout="horizontal"
+          :data-source="list"
+        >
+          <template #loadMore>
+            <div
+              v-if="!initLoading && !loading"
+            >
+              <a-button @click="onLoadMore">Показать еще</a-button>
+            </div>
+          </template>
+          <template #renderItem="{ item }">
+            <a-skeleton :loading="!!item.loading" active>
+              <YouTubeCard :avatarSrc="item.picture.large" />
+            </a-skeleton>
+          </template>
+        </a-list>
       </div>
       <a-list class="demo-loadmore-list" :loading="initLoading" item-layout="horizontal" :data-source="list">
         <template #renderItem="{ item }">
