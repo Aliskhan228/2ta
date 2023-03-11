@@ -1,6 +1,6 @@
 <template>
     <a-card class="youtube-card">
-        <a-card-meta>
+        <!-- <a-card-meta>
             <template #avatar>
                 <a-avatar :src="avatarSrc" />
             </template>
@@ -34,13 +34,13 @@
                 </a-popover>
 
             </template>
-        </a-card-meta>
+        </a-card-meta> -->
+        <a-avatar :src="avatarSrc" />
         <div class="youtube-card-data">
-            <div>ER</div>
+            <div>ER <a-badge color="#f50" text="#f50" /></div>
             <div>Подписчики</div>
             <div>Просмотры</div>
             <div>Цена за обзор</div>
-            <div>ER</div>
             <div style="display: flex; flex-direction: column; gap: 5px;">
                 <a-button type="primary">Связаться</a-button>
                 <a-button>Полный анализ</a-button>

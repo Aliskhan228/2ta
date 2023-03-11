@@ -4,12 +4,10 @@
     <div class="container">
       <div class="filters-block__wrapper">
         <div class="filters-block__buttons">
-          <a-button class="filters-block__btn youtube-btn" type="primary"
-            >Youtube</a-button
-          >
-          <a-button class="filters-block__btn instagram-btn"
-            >Instagram</a-button
-          >
+          <a-button class="filters-block__btn youtube-btn" :type="socialButtonsType.youtube"
+            @click="socialButtonsType.toggleButtonsType">Youtube</a-button>
+          <a-button class="filters-block__btn instagram-btn" :type="socialButtonsType.instagram"
+            @click="socialButtonsType.toggleButtonsType">Instagram</a-button>
         </div>
 
         <div class="filters-block__filters-wrapper">
@@ -19,10 +17,7 @@
               <a-tooltip class="filters-block__tooltip" placement="right">
                 <template #title>
                   <span>
-                    Не фильтрует блогеров. Выбор значений влияет на %<span
-                      class="bold-text"
-                      >ЦА</span
-                    >
+                    Не фильтрует блогеров. Выбор значений влияет на %<span class="bold-text">ЦА</span>
                     (процент целевой аудитории) Вычисляется как %
                     <span class="bold-text">из страны аудитории</span> * %
                     <span class="bold-text">по полу</span> * %
@@ -35,25 +30,15 @@
             </p>
 
             <div class="filters-block__gender">
-              <WomanOutlined
-                class="filters-block__gender-icon filters-block__gender-icon_female"
-              />
-              <ManOutlined
-                class="filters-block__gender-icon filters-block__gender-icon_male"
-              />
+              <WomanOutlined class="filters-block__gender-icon filters-block__gender-icon_female" />
+              <ManOutlined class="filters-block__gender-icon filters-block__gender-icon_male" />
             </div>
 
             <div class="filters-block__slider filters-block__slider_age">
               <p class="filters-block__slider-name">Возраст</p>
-              <a-slider
-                class="filters-block__slider-component"
-                v-model:value="slidersState.age.values"
-                :marks="slidersState.age.marks"
-                range
-                :step="null"
-                :tooltipVisible="false"
-                @change="slidersState.age.handleSlider"
-              >
+              <a-slider class="filters-block__slider-component" v-model:value="slidersState.age.values"
+                :marks="slidersState.age.marks" range :step="null" :tooltipVisible="false"
+                @change="slidersState.age.handleSlider">
                 <template #mark="{ label, point }">
                   <template v-if="slidersState.age.values.includes(point)">
                     <strong>{{ label }}</strong>
@@ -62,10 +47,7 @@
                 </template>
               </a-slider>
             </div>
-            <a-auto-complete
-              class="filters-block__choose-country inputs"
-              placeholder="Выберите страну"
-            />
+            <a-auto-complete class="filters-block__choose-country inputs" placeholder="Выберите страну" />
           </div>
 
           <div class="filters-block__filter">
@@ -77,19 +59,11 @@
               <div class="filters-block__filter-left">
                 <div class="filters-block__slider filters-block__slider_subs">
                   <p class="filters-block__slider-name">Подписчики</p>
-                  <a-slider
-                    class="filters-block__slider-component"
-                    v-model:value="slidersState.subscribers.values"
-                    :marks="slidersState.subscribers.marks"
-                    range
-                    :step="null"
-                    :tooltipVisible="false"
-                    @change="slidersState.subscribers.handleSlider"
-                  >
+                  <a-slider class="filters-block__slider-component" v-model:value="slidersState.subscribers.values"
+                    :marks="slidersState.subscribers.marks" range :step="null" :tooltipVisible="false"
+                    @change="slidersState.subscribers.handleSlider">
                     <template #mark="{ label, point }">
-                      <template
-                        v-if="slidersState.subscribers.values.includes(point)"
-                      >
+                      <template v-if="slidersState.subscribers.values.includes(point)">
                         <strong>{{ label }}</strong>
                       </template>
                       <template v-else>{{ label }}</template>
@@ -99,19 +73,11 @@
 
                 <div class="filters-block__slider filters-block__slider_views">
                   <p class="filters-block__slider-name">Просмотры</p>
-                  <a-slider
-                    class="filters-block__slider-component"
-                    v-model:value="slidersState.views.values"
-                    :marks="slidersState.views.marks"
-                    range
-                    :step="null"
-                    :tooltipVisible="false"
-                    @change="slidersState.views.handleSlider"
-                  >
+                  <a-slider class="filters-block__slider-component" v-model:value="slidersState.views.values"
+                    :marks="slidersState.views.marks" range :step="null" :tooltipVisible="false"
+                    @change="slidersState.views.handleSlider">
                     <template #mark="{ label, point }">
-                      <template
-                        v-if="slidersState.views.values.includes(point)"
-                      >
+                      <template v-if="slidersState.views.values.includes(point)">
                         <strong>{{ label }}</strong>
                       </template>
                       <template v-else>{{ label }}</template>
@@ -122,25 +88,19 @@
                 <div class="filters-block__date">
                   <p class="filters-block__date-name">Дата последнего видео</p>
                   <a-space class="filters-block__date-component inputs">
-                    <a-range-picker />
+                    <a-range-picker :locale="locale" />
                   </a-space>
                 </div>
               </div>
 
               <div class="filters-block__filter-right">
-                <a-select
-                  class="filters-block__themes inputs"
-                  placeholder="Выберите тематику"
-                ></a-select>
+                <a-select class="filters-block__themes inputs" placeholder="Выберите тематику" mode="multiple">
+                  <a-select-option :value="selectValue.value">Аниме и комиксы</a-select-option>
+                </a-select>
 
-                <a-auto-complete
-                  class="filters-block__city inputs"
-                  placeholder="Город блогера"
-                />
+                <a-auto-complete class="filters-block__city inputs" placeholder="Город блогера" />
 
-                <a-checkbox class="filters-block__checkbox"
-                  >Только с контактами</a-checkbox
-                >
+                <a-checkbox class="filters-block__checkbox">Только с контактами</a-checkbox>
               </div>
             </div>
           </div>
@@ -155,7 +115,10 @@ import {
   ManOutlined,
   WomanOutlined,
 } from "@ant-design/icons-vue";
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive, ref } from "vue";
+import 'dayjs/locale/ru';
+import locale from 'ant-design-vue/es/date-picker/locale/ru_RU';
+locale.lang.rangePlaceholder = ['от', 'до']
 export default defineComponent({
   components: {
     QuestionCircleOutlined,
@@ -163,6 +126,21 @@ export default defineComponent({
     WomanOutlined,
   },
   setup() {
+    const socialButtonsType = reactive({
+      youtube: 'primary',
+      instagram: null,
+      toggleButtonsType: (event) => {
+        if (event.srcElement.innerText === 'Youtube') {
+          socialButtonsType.youtube = 'primary'
+          socialButtonsType.instagram = null
+          return
+        }
+        socialButtonsType.instagram = 'primary'
+        socialButtonsType.youtube = null
+      }
+    })
+
+    const selectValue = ref([])
     const slidersState = reactive({
       age: {
         values: [0, 100],
@@ -213,7 +191,10 @@ export default defineComponent({
       },
     });
     return {
+      socialButtonsType,
       slidersState,
+      selectValue,
+      locale,
     };
   },
 });
