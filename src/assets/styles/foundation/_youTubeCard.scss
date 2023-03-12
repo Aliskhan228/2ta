@@ -3,22 +3,25 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	.ant-card-body {
-		padding: 0;
-	}
 	&__card {
 		padding: 16px 64px 20px 20px;
 		margin-top: 16px;
 		border-radius: 8px;
 	}
 	&__card:first-child {
-		margin-top: 0;
+		margin-top: 24px;
+	}
+	&__card .ant-card-body {
+		width: 100%;
+		padding: 0;
 	}
 	&__card-top {
+		display: flex;
 	}
 	&__card-avatar {
 		height: 52px;
 		width: 52px;
+		margin-right: 16px;
 	}
 	&__card-name {
 		display: flex;
@@ -41,6 +44,7 @@
 		align-items: center;
 		max-width: 340px;
 		width: 100%;
+		margin-left: auto;
 		overflow: hidden;
 		cursor: pointer;
 	}
@@ -75,16 +79,64 @@
 	&__card-data {
 		display: flex;
 		justify-content: space-between;
+		margin-top: 26px;
 	}
 	&__card-data-items {
 		display: flex;
 		gap: 80px;
-		margin-top: 26px;
+	}
+	&__card-data-item {
+		color: $secondary-text;
+	}
+	&__card-data-item h4 {
+		font-size: $average-font-size;
+		color: $secondary-text;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	&__card-data-item span {
+		font-size: $average-font-size;
+		color: $primary-text;
+	}
+	&__card-data-item p {
+		font-weight: 400;
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+	&__card-data-item p span {
+		font-size: 12px;
+		font-weight: 400;
+		color: $primary-text;
+	}
+	&__card-data-item._er p {
+		margin-top: 12px;
+		display: flex;
+		align-items: center;
+	}
+	&__card-data-item._er p .ant-badge {
+		margin-left: 8px;
+	}
+	&__card-data-item._er p .ant-badge .ant-badge-status-dot {
+		height: 8px;
+		width: 8px;
+	}
+	&__card-data-item._er p .ant-badge .ant-badge-status-text {
+		margin-left: 4px;
+	}
+	&__card-data-item._er p .tooltip-icon {
+		color: $main-extra;
+		font-size: 15px;
+		margin-left: 4px;
+	}
+	&__card-data-item._views p {
+		margin-top: 6px;
+	}
+	&__card-data-item._views p.first-child {
+		margin-top: 8px;
 	}
 	&__card-buttons {
 		display: flex;
 		gap: 8px;
-		margin-top: 32px;
 	}
 	&__card-btn {
 		font-size: $average-font-size;

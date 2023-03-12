@@ -30,4 +30,16 @@
 		gap: 16px;
 		margin-top: 24px;
 	}
+	&__loadmore-btn {
+		text-align: center;
+		margin-top: 24px;
+	}
+	&__loadmore-btn button {
+		border-radius: 4px;
+		border: 1px solid rgba(220, 223, 229, 1);
+		font-size: $average-font-size;
+		font-weight: 600;
+		padding: 0px 16px 2px;
+		height: 32px;
+	}
 }

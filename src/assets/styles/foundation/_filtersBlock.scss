@@ -4,14 +4,6 @@
 		display: flex;
 		justify-content: space-between;
 	}
-  .inputs {
-    border-radius: 4px;
-  }
-  .inputs::placeholder {
-    color: $secondary-text;
-    font-size: $average-font-size;
-    font-weight: 400;
-  }
 
   &__buttons {
     display: flex;
@@ -54,11 +46,6 @@
     font-weight: 600;
     font-size: $average-font-size;
   }
-  &__tooltip-icon {
-    color: $main-extra;
-    font-size: 15px;
-    margin-left: 4px;
-  }
   &__gender {
     display: flex;
     margin: 16px 0;
@@ -92,6 +79,13 @@
     width: 281px;
     margin-bottom: 45px;
   }
+	&__slider-component .ant-slider-track {
+		background-color: $main-extra;
+	}
+	&__slider-component .ant-slider-handle,
+	&__slider-component .ant-slider-dot-active {
+		border-color: $main-extra;
+	}
   &__choose-country {
     width: 100%;
   }
@@ -122,6 +116,13 @@
   &__city {
     width: 100%;
   }
+	&__themes a-select-option {
+		border: 2px solid black;
+	}
+	.ant-select-multiple .ant-select-selection-item {
+		background-color: rgba(232, 235, 241, 1);
+		border: 1px solid rgba(220, 223, 229, 1);
+	}
   &__city {
     margin: 20px 0;
   }
@@ -142,9 +143,4 @@
   .ant-slider-mark {
     pointer-events: none !important;
   }
-}
-
-/* Tooltip width */
-.ant-tooltip-inner {
-  min-width: 500px !important;
 }

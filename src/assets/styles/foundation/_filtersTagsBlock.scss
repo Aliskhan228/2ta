@@ -8,4 +8,15 @@
 		flex-wrap: wrap;
 		gap: 8px;
 	}
+	.filter-tag_button {
+		border-color: rgba(220, 223, 229, 1);
+		background-color: #fff;
+		color: $primary-text;
+		cursor: pointer;
+		transition: border-color 500ms ease, color 500ms ease;
+	}
+	.filter-tag_button:hover {
+		border-color: $main-extra;
+		color: $main-extra;
+	}
 }

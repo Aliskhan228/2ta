@@ -14,10 +14,10 @@
             </template>
             Выгрузить 20 результатов
           </a-button>
-          <a-select class="blogger-list__sort" placeholder="По количеству просмотров"></a-select>
+          <a-select class="blogger-list__sort inputs" placeholder="По количеству просмотров"></a-select>
         </div>
 
-        <a-list
+        <!-- <a-list
           class="blogger-list__bloggers demo-loadmore-list"
           :loading="initLoading"
           item-layout="horizontal"
@@ -35,7 +35,7 @@
               <YouTubeCard :avatarSrc="item.picture.large" />
             </a-skeleton>
           </template>
-        </a-list>
+        </a-list> -->
       </div>
       <a-list class="demo-loadmore-list" :loading="initLoading" item-layout="horizontal" :data-source="list">
         <template #renderItem="{ item }">
@@ -44,8 +44,7 @@
           </a-skeleton>
         </template>
         <template #loadMore>
-          <div v-if="!initLoading && !loading"
-            :style="{ textAlign: 'center', marginTop: '12px', height: '32px', lineHeight: '32px' }">
+          <div class="blogger-list__loadmore-btn" v-if="!initLoading && !loading">
             <a-button @click="onLoadMore">Показать еще</a-button>
           </div>
         </template>

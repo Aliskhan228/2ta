@@ -14,18 +14,18 @@
           <div class="filters-block__settings">
             <p class="filters-block__title filters-block__title_settings">
               Настройки ЦА
-              <a-tooltip class="filters-block__tooltip" placement="right">
+              <a-tooltip class="filters-block__tooltip tooltip" placement="right">
                 <template #title>
-                  <span>
+                  <span class="tooltip-text">
                     Не фильтрует блогеров. Выбор значений влияет на %<span class="bold-text">ЦА</span>
-                    (процент целевой аудитории) Вычисляется как %
-                    <span class="bold-text">из страны аудитории</span> * %
-                    <span class="bold-text">по полу</span> * %
-                    <span class="bold-text">по возрасту</span>. По этому
+                    (процент целевой аудитории) <br> Вычисляется как %
+                    <span class="bold-text">из страны аудитории *</span> %
+                    <span class="bold-text">по полу *</span> %
+                    <span class="bold-text">по возрасту</span>. <br> По этому
                     значению блогеров можно сортировать.
                   </span>
                 </template>
-                <QuestionCircleOutlined class="filters-block__tooltip-icon" />
+                <QuestionCircleOutlined class="tooltip-icon" />
               </a-tooltip>
             </p>
 

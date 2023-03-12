@@ -11,7 +11,7 @@
           <a-tag class="filters-tags__item filter-tag" closable>Подписчики: 50k–500k</a-tag>
           <a-tag class="filters-tags__item filter-tag" closable>Просмотры: 50k–500k</a-tag>
           <a-tag class="filters-tags__item filter-tag" closable>Категория: Аниме и комиксы</a-tag>
-          <a-tag class="filters-tags__item filter-tag">Сбросить все</a-tag>
+          <a-tag class="filters-tags__item filter-tag filter-tag_button">Сбросить все</a-tag>
         </div>
       </div>
     </div>
