@@ -20,30 +20,32 @@
         </div>
       </div>
 
-      <a-popover class="blogger-list__card-popover" placement="left">
-        <template #title>
-          <div class="blogger-list__card-popover-title"><b>О блогере</b></div>
-        </template>
-        <template #content>
-          <div class="blogger-list__card-popover-text">
-            Привет гости, на связи FOSTI. Канал "FOSTI" посвещён урокам или же
-            туториалам для начинающих ютуберов, по типу как сделать оформление
-            канала, как сделать превью, как поднять подписчиков и многое другое.
-            Здесь ты научишься азам Photoshop'a, Cinema 4d и многим другим.
-            Подпишись и лето увеличивается на 1 месяц!
-          </div>
-        </template>
-        <div class="blogger-list__card-description blogger-list__card_youtube">
-          <div class="blogger-list__card-description-text">
-            Привет гости, на связи FOSTI. Канал "FOSTI" посвещён урокам или же
-            туториалам для начинающих ютуберов, по типу как сделать оформление
-            канала, как сделать превью, как поднять подписчиков и многое другое.
-            Здесь ты научишься азам Photoshop'a, Cinema 4d и многим другим.
-            Подпишись и лето увеличивается на 1 месяц!
-          </div>
-          <RightOutlined />
+
+      <div class="blogger-list__card-description blogger-list__card_youtube">
+        <div class="blogger-list__card-description-text">
+          Привет гости, на связи FOSTI. Канал "FOSTI" посвещён урокам или же
+          туториалам для начинающих ютуберов, по типу как сделать оформление
+          канала, как сделать превью, как поднять подписчиков и многое другое.
+          Здесь ты научишься азам Photoshop'a, Cinema 4d и многим другим.
+          Подпишись и лето увеличивается на 1 месяц!
         </div>
-      </a-popover>
+        <a-popover class="blogger-list__card-popover" placement="left">
+          <template #title>
+            <div class="blogger-list__card-popover-title"><b>О блогере</b></div>
+          </template>
+          <template #content>
+            <div class="blogger-list__card-popover-text">
+              Привет гости, на связи FOSTI. Канал "FOSTI" посвещён урокам или же
+              туториалам для начинающих ютуберов, по типу как сделать оформление
+              канала, как сделать превью, как поднять подписчиков и многое другое.
+              Здесь ты научишься азам Photoshop'a, Cinema 4d и многим другим.
+              Подпишись и лето увеличивается на 1 месяц!
+            </div>
+          </template>
+          <RightOutlined />
+        </a-popover>
+
+      </div>
     </div>
 
     <div class="blogger-list__card-data blogger-list__card_youtube">
@@ -55,10 +57,7 @@
             <p>
               %ЦА
               <a-badge color="#F7B801" text="31.7%" />
-              <a-tooltip
-                class="blogger-list__tooltip tooltip"
-                placement="right"
-              >
+              <a-tooltip class="blogger-list__tooltip tooltip" placement="right">
                 <template #title>
                   <span>
                     Вычисляется как %
@@ -118,19 +117,12 @@
       </div>
 
       <div class="blogger-list__card-buttons">
-        <a-button
-          class="blogger-list__card-btn blogger-list__card-btn_contact"
-          type="primary"
-        >
-          <MessageOutlined />
+        <a-button class="blogger-list__card-btn blogger-list__card-btn_contact" type="primary">
+          <IconMessage />
           Связаться
         </a-button>
-        <a-button class="blogger-list__card-btn blogger-list__card-btn_analise"
-          >Полный анализ</a-button
-        >
-        <a-button class="blogger-list__card-btn blogger-list__card-btn_contacts"
-          >Контакты</a-button
-        >
+        <a-button class="blogger-list__card-btn blogger-list__card-btn_analise">Полный анализ</a-button>
+        <a-button class="blogger-list__card-btn blogger-list__card-btn_contacts">Контакты</a-button>
       </div>
     </div>
   </a-card>
@@ -143,6 +135,7 @@ import {
   QuestionCircleOutlined,
   InfoCircleOutlined,
 } from "@ant-design/icons-vue";
+import IconMessage from "./icons/IconMessage.vue";
 export default {
   components: {
     MinusCircleTwoTone,
@@ -150,6 +143,7 @@ export default {
     RightOutlined,
     QuestionCircleOutlined,
     InfoCircleOutlined,
+    IconMessage
   },
   props: {
     avatarSrc: String,

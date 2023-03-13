@@ -1,5 +1,4 @@
 <template>
-  <!-- Write HTML here -->
   <section class="filters-block">
     <div class="container">
       <div class="filters-block__wrapper">
