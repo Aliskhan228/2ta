@@ -1,5 +1,4 @@
 <template>
-  <!-- Write HTML here -->
   <div class="filters-tags">
     <div class="container">
       <div class="filters-tags__wrapper">
