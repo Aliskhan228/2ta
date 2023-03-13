@@ -17,30 +17,12 @@
           <a-select class="blogger-list__sort inputs" placeholder="По количеству просмотров"></a-select>
         </div>
 
-        <!-- <a-list
-          class="blogger-list__bloggers demo-loadmore-list"
-          :loading="initLoading"
-          item-layout="horizontal"
-          :data-source="list"
-        >
-          <template #loadMore>
-            <div
-              v-if="!initLoading && !loading"
-            >
-              <a-button @click="onLoadMore">Показать еще</a-button>
-            </div>
-          </template>
-          <template #renderItem="{ item }">
-            <a-skeleton :loading="!!item.loading" active>
-              <YouTubeCard :avatarSrc="item.picture.large" />
-            </a-skeleton>
-          </template>
-        </a-list> -->
       </div>
       <a-list class="demo-loadmore-list" :loading="initLoading" item-layout="horizontal" :data-source="list">
         <template #renderItem="{ item }">
           <a-skeleton :loading="!!item.loading" active>
-            <YouTubeCard :avatarSrc="item.picture.large" />
+            <!-- <YouTubeCard :avatarSrc="item.picture.large" /> -->
+            <InstagramCard :avatarSrc="item.picture.large" />
           </a-skeleton>
         </template>
         <template #loadMore>
@@ -56,10 +38,11 @@
 import { defineComponent, onMounted, ref, nextTick } from 'vue';
 import { DownloadOutlined } from "@ant-design/icons-vue";
 import YouTubeCard from './YouTubeCard.vue';
+import InstagramCard from './InstagramCard.vue';
 const count = 1;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
 export default defineComponent({
-  components: { DownloadOutlined, YouTubeCard },
+  components: { DownloadOutlined, YouTubeCard, InstagramCard },
   setup() {
     const initLoading = ref(true);
     const loading = ref(false);

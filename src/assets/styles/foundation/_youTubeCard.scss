@@ -1,147 +1,213 @@
 .blogger-list {
-	.ant-card-meta-detail {
-		display: flex;
-		justify-content: space-between;
-	}
-	&__card {
-		padding: 16px 64px 20px 20px;
-		margin-top: 16px;
-		border-radius: 8px;
-	}
-	&__card:first-child {
-		margin-top: 24px;
-	}
-	&__card .ant-card-body {
-		width: 100%;
-		padding: 0;
-	}
-	&__card-top {
-		display: flex;
-	}
-	&__card-avatar {
-		height: 52px;
-		width: 52px;
-		margin-right: 16px;
-	}
-	&__card-name {
-		display: flex;
-		align-items: center;
-	}
-	&__card-name h2 {
-		font-size: $average-font-size;
-		font-weight: 600;
-		margin-bottom: 0;
-	}
-	&__card-name .remove-icon {
-		margin: 2px 0 0 5px;
-		cursor: pointer;
-	}
-	&__card-tags {
-		margin-top: 8px;
-	}
-	&__card-description {
-		display: flex;
-		align-items: center;
-		max-width: 340px;
-		width: 100%;
-		margin-left: auto;
-		overflow: hidden;
-		cursor: pointer;
-	}
-	&__card-description-text {
-		height: 50px;
-		line-height: 16px;
-		overflow: hidden;
-		color: transparent;
-		-webkit-background-clip: text;
-		background-clip: text;
-		background-image: linear-gradient(
-			to bottom,
-			rgba(129, 131, 137, 1),
-			rgba(129, 131, 137, 1),
-			rgba(129, 131, 137, 0.3)
-		);
-	}
-	&__card-popover {
-		width: 340px;
-		color: $primary-text;
-	}
-	&__card-popover-title {
-		font-size: $average-font-size;
-		font-weight: 600;
-		margin: 12px 0;
-	}
-	&__card-popover-text {
-		font-size: 12px;
-		font-weight: 400;
-		width: 420px;
-	}
-	&__card-data {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 26px;
-	}
-	&__card-data-items {
-		display: flex;
-		gap: 80px;
-	}
-	&__card-data-item {
-		color: $secondary-text;
-	}
-	&__card-data-item h4 {
-		font-size: $average-font-size;
-		color: $secondary-text;
-		font-weight: 600;
-		margin-bottom: 0;
-	}
-	&__card-data-item span {
-		font-size: $average-font-size;
-		color: $primary-text;
-	}
-	&__card-data-item p {
-		font-weight: 400;
-		font-size: 12px;
-		margin-bottom: 0;
-	}
-	&__card-data-item p span {
-		font-size: 12px;
-		font-weight: 400;
-		color: $primary-text;
-	}
-	&__card-data-item._er p {
-		margin-top: 12px;
-		display: flex;
-		align-items: center;
-	}
-	&__card-data-item._er p .ant-badge {
-		margin-left: 8px;
-	}
-	&__card-data-item._er p .ant-badge .ant-badge-status-dot {
-		height: 8px;
-		width: 8px;
-	}
-	&__card-data-item._er p .ant-badge .ant-badge-status-text {
-		margin-left: 4px;
-	}
-	&__card-data-item._er p .tooltip-icon {
-		color: $main-extra;
-		font-size: 15px;
-		margin-left: 4px;
-	}
-	&__card-data-item._views p {
-		margin-top: 6px;
-	}
-	&__card-data-item._views p.first-child {
-		margin-top: 8px;
-	}
-	&__card-buttons {
-		display: flex;
-		gap: 8px;
-	}
-	&__card-btn {
-		font-size: $average-font-size;
-		font-weight: 600;
-		border-radius: 4px;
-		padding: 0 17px;
-	}
+  .ant-card-meta-detail {
+    display: flex;
+    justify-content: space-between;
+  }
+  // YouTube Card
+  &__card {
+    padding: 16px 64px 20px 20px;
+    margin-top: 16px;
+    border-radius: 8px;
+  }
+  &__card:first-child {
+    margin-top: 24px;
+  }
+  &__card .ant-card-body {
+    width: 100%;
+    padding: 0;
+  }
+  &__card-top {
+    display: flex;
+  }
+  &__card-avatar {
+    height: 52px;
+    width: 52px;
+    margin-right: 16px;
+  }
+  &__card-name {
+    display: flex;
+    align-items: center;
+  }
+  &__card-name h2 {
+    font-size: $average-font-size;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  &__card-name .remove-icon {
+    margin: 2px 0 0 5px;
+    cursor: pointer;
+  }
+  &__card-tags {
+    margin-top: 8px;
+  }
+  &__card-description {
+    display: flex;
+    align-items: center;
+    max-width: 340px;
+    width: 100%;
+    margin-left: auto;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  &__card-description-text {
+    height: 50px;
+    line-height: 16px;
+    overflow: hidden;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(129, 131, 137, 1),
+      rgba(129, 131, 137, 1),
+      rgba(129, 131, 137, 0.3)
+    );
+  }
+  &__card-popover {
+    width: 340px;
+    color: $primary-text;
+  }
+  &__card-popover-title {
+    font-size: $average-font-size;
+    font-weight: 600;
+    margin: 12px 0;
+  }
+  &__card-popover-text {
+    font-size: 12px;
+    font-weight: 400;
+    width: 420px;
+  }
+  &__card-data {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+  }
+  &__card-data-items {
+    display: flex;
+    gap: 80px;
+  }
+  &__card-data-item {
+    color: $secondary-text;
+  }
+  &__card-data-item h4 {
+    font-size: $average-font-size;
+    color: $secondary-text;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  &__card-data-item span {
+    font-size: $average-font-size;
+    color: $primary-text;
+  }
+  &__card-data-item p {
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  &__card-data-item p span {
+    font-size: 12px;
+    font-weight: 400;
+    color: $primary-text;
+  }
+  &__card-data-item .er-info,
+  &__card_instagram &__card-data-item .review-info,
+  &__card_instagram &__card-data-item .prices-info,
+  &__card_instagram &__card-data-item .ta-info,
+  &__card_instagram &__card-data-item .reels-info,
+  &__card_instagram &__card-data-item .video-info,
+  &__card_instagram &__card-data-item .photo-info {
+    margin-top: 12px;
+  }
+  &__card-data-item._er .er-info p,
+  &__card_instagram &__card-data-item._review .review-info p,
+  &__card_instagram &__card-data-item._prices .prices-info p,
+  &__card_instagram &__card-data-item._ta .ta-info p,
+  &__card_instagram &__card-data-item._reels .reels-info p,
+  &__card_instagram &__card-data-item._video .video-info p,
+  &__card_instagram &__card-data-item._photo .photo-info p {
+	margin-top: 8px;
+  }
+  &__card-data-item._er .er-info p .ant-badge {
+    margin-left: 8px;
+  }
+  &__card-data-item._er .er-info p .ant-badge .ant-badge-status-dot {
+    height: 8px;
+    width: 8px;
+  }
+  &__card-data-item._er .er-info p .ant-badge .ant-badge-status-text {
+    margin-left: 4px;
+  }
+  &__card-data-item._er .er-info p .tooltip-icon {
+    color: $main-extra;
+    font-size: 15px;
+    margin-left: 4px;
+  }
+  &__card-data-item._views .views-info {
+    margin-top: 8px;
+  }
+  &__card-data-item._views .views-info p {
+    margin-top: 6px;
+  }
+  &__card-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  &__card-btn {
+    font-size: $average-font-size;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 0 17px;
+  }
+  // Instagram Card
+  &__card_instagram {
+    padding: 16px 20px 20px 20px;
+  }
+  &__card_instagram &__card-data {
+	flex-direction: column-reverse;
+  }
+  &__card_instagram &__card-buttons {
+	margin-bottom: 20px;
+  }
+  &__card_instagram &__card-data {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #E8EBF1;
+  }
+  &__card_instagram &__card-data-item-buttons {
+	display: flex;
+	gap: 4px;
+	margin-top: 12px;
+	flex-wrap: wrap;
+  }
+  &__card_instagram &__card-data-item-buttons .ant-btn {
+	display: flex;
+	padding: 0 8px;
+	height: 22px;
+	border-radius: 2px;
+	border: 1px solid #DCDFE5;
+  }
+  &__card_instagram &__card-data-item-buttons .ant-btn span {
+	font-size: 12px;
+	font-weight: 400;
+  }
+  &__card_instagram &__card-data-item h4 {
+	color: $primary-text;
+	font-weight: 600;
+  }
+  &__card_instagram &__card-data-item .anticon {
+	color: #818389;
+	font-size: 12px;
+  }
+  &__card_instagram &__card-bottom {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+  }
+  &__card_instagram &__card-bottom &__card-bottom-item {
+	max-width: 380px;
+  }
+  &__card_instagram &__card-bottom &__card-bottom-item h4 {
+	font-size: $average-font-size;
+	font-weight: 600;
+	color: $primary-text;
+  }
 }
