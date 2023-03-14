@@ -21,7 +21,7 @@
       <a-list class="demo-loadmore-list" :loading="initLoading" item-layout="horizontal" :data-source="list">
         <template #renderItem="{ item }">
           <a-skeleton :loading="!!item.loading" active>
-            <!-- <YouTubeCard :avatarSrc="item.picture.large" /> -->
+            <YouTubeCard :avatarSrc="item.picture.large" />
             <InstagramCard :avatarSrc="item.picture.large" />
           </a-skeleton>
         </template>

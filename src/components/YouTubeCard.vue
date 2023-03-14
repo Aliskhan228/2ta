@@ -4,13 +4,15 @@
       <a-avatar class="blogger-list__card-avatar" :src="avatarSrc" />
       <div>
         <div class="blogger-list__card-name">
-          <h2>FOSTI</h2>
-          <a-tooltip class="blogger-list__tooltip tooltip" placement="top">
-            <template #title>
-              <span class="tooltip-text"> Убрать из выгрузки </span>
-            </template>
-            <MinusCircleTwoTone class="remove-icon" />
-          </a-tooltip>
+          <div>
+            <h2>FOSTI</h2>
+            <a-tooltip class="blogger-list__tooltip tooltip" placement="top">
+              <template #title>
+                <span class="tooltip-text"> Убрать из выгрузки </span>
+              </template>
+              <MinusCircleTwoTone class="remove-icon" />
+            </a-tooltip>
+          </div>
         </div>
         <div class="blogger-list__card-tags filters-tags__list">
           <a-tag class="filter-tag filter-tag_green">Аниме и комиксы</a-tag>
@@ -19,7 +21,6 @@
           <a-tag class="filter-tag">Мультфильмы</a-tag>
         </div>
       </div>
-
 
       <div class="blogger-list__card-description blogger-list__card_youtube">
         <div class="blogger-list__card-description-text">
@@ -37,14 +38,13 @@
             <div class="blogger-list__card-popover-text">
               Привет гости, на связи FOSTI. Канал "FOSTI" посвещён урокам или же
               туториалам для начинающих ютуберов, по типу как сделать оформление
-              канала, как сделать превью, как поднять подписчиков и многое другое.
-              Здесь ты научишься азам Photoshop'a, Cinema 4d и многим другим.
-              Подпишись и лето увеличивается на 1 месяц!
+              канала, как сделать превью, как поднять подписчиков и многое
+              другое. Здесь ты научишься азам Photoshop'a, Cinema 4d и многим
+              другим. Подпишись и лето увеличивается на 1 месяц!
             </div>
           </template>
           <RightOutlined />
         </a-popover>
-
       </div>
     </div>
 
@@ -57,7 +57,10 @@
             <p>
               %ЦА
               <a-badge color="#F7B801" text="31.7%" />
-              <a-tooltip class="blogger-list__tooltip tooltip" placement="right">
+              <a-tooltip
+                class="blogger-list__tooltip tooltip"
+                placement="right"
+              >
                 <template #title>
                   <span>
                     Вычисляется как %
@@ -70,8 +73,7 @@
               </a-tooltip>
             </p>
             <p>
-              18-35
-              лет
+              18-35 лет
               <span class="bold-text">52.7%</span>
             </p>
             <p>
@@ -117,12 +119,21 @@
       </div>
 
       <div class="blogger-list__card-buttons">
-        <a-button class="blogger-list__card-btn blogger-list__card-btn_contact" type="primary">
-          <IconMessage />
-          Связаться
+        <a-button
+          class="blogger-list__card-btn blogger-list__card-btn_contact"
+          type="primary"
+        >
+          <div>
+            <IconMessage />
+            Связаться
+          </div>
         </a-button>
-        <a-button class="blogger-list__card-btn blogger-list__card-btn_analise">Полный анализ</a-button>
-        <a-button class="blogger-list__card-btn blogger-list__card-btn_contacts">Контакты</a-button>
+        <a-button class="blogger-list__card-btn blogger-list__card-btn_analise"
+          >Полный анализ</a-button
+        >
+        <a-button class="blogger-list__card-btn blogger-list__card-btn_contacts"
+          >Контакты</a-button
+        >
       </div>
     </div>
   </a-card>
@@ -143,7 +154,7 @@ export default {
     RightOutlined,
     QuestionCircleOutlined,
     InfoCircleOutlined,
-    IconMessage
+    IconMessage,
   },
   props: {
     avatarSrc: String,

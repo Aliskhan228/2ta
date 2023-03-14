@@ -25,8 +25,11 @@
 }
 .tooltip-icon {
 	color: $main-extra !important;
-	font-size: 15px;
 	margin-left: 4px !important;
+}
+.tooltip-icon svg {
+	height: 14.67px;
+	width: 14.67px;
 }
 .inputs .ant-select-selector {
 	border-radius: 4px !important;
@@ -38,8 +41,14 @@
 }
 .verified-icon {
 	color: #41B662;
-	height: 14px;
-	width: 14px;
 	margin-left: 3px !important;
 	margin-top: 2px;
+}
+.verified-icon svg {
+	height: 14.67px;
+	width: 14.67px;
+}
+.ant-badge-status-dot {
+	height: 8px;
+	width: 8px;
 }
