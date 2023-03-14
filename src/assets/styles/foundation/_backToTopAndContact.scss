@@ -1,21 +1,40 @@
 .ant-back-top {
-    right: 66px;
-    bottom: 96px;
+  display: flex;
+  align-items: center;
+	justify-content: center;
+	height: 36px;
+	width: 36px;
+  border-radius: 50%;
+  right: 66px;
+  bottom: 96px;
+	background-color: rgba(50, 52, 54, .6);
+	box-shadow: 0 6px 10px rgba(50, 52, 54, .1);
+	color: #fff;
+	.ant-back-top-inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.ant-back-top-inner svg {
+		width: 10.5px;
+		height: 13.5px;
+	}
 }
 .contact {
-    position: fixed;
-    right: 60px;
-    bottom: 28px;
-    height: 48px;
-    width: 48px;
-    background-color: #2382F7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    svg {
-        height: 20px;
-        width: 20px;
-    }
+  position: fixed;
+  right: 60px;
+  bottom: 28px;
+  height: 48px;
+  width: 48px;
+  background-color: #2382f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+	box-shadow: 0 6px 10px rgba(50, 52, 54, .1);
+  cursor: pointer;
+  svg {
+    height: 20px;
+    width: 20px;
+  }
 }

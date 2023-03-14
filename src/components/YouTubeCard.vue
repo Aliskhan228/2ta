@@ -19,11 +19,11 @@
           <a-tag class="filter-tag">Анимация</a-tag>
           <a-tag class="filter-tag">Игры</a-tag>
           <a-tag class="filter-tag">Мультфильмы</a-tag>
-          <a-tag class="filter-tag">Мультфильмы</a-tag>
-          <a-tag class="filter-tag">Мультфильмы</a-tag>
-          <a-tag class="filter-tag">Мультфильмы</a-tag>
-          <a-tag class="filter-tag">Мультфильмы</a-tag>
-          <a-tag class="filter-tag">Мультфильмы</a-tag>
+          <a-tag class="filter-tag">Искусство и фото</a-tag>
+          <a-tag class="filter-tag">Кино и сериалы</a-tag>
+          <a-tag class="filter-tag">Лайфстайл</a-tag>
+          <a-tag class="filter-tag">Обработка фото</a-tag>
+          <a-tag class="filter-tag">Технологии</a-tag>
           <a-tag class="filter-tag">Мультфильмы</a-tag>
         </div>
       </div>

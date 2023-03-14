@@ -8,7 +8,7 @@
     padding: 16px 20px 20px 20px;
     margin-top: 16px;
     border-radius: 8px;
-		border: none;
+    border: none;
   }
   &__card:first-child {
     margin-top: 24px;
@@ -38,16 +38,31 @@
     margin: 1px 0 0 6px;
     cursor: pointer;
   }
-	&__card-name .remove-icon svg {
-		height: 16.5px;
-		width: 16.5px;
-	}
+  &__card-name .remove-icon svg {
+    height: 16.5px;
+    width: 16.5px;
+  }
   &__card-tags {
+    position: relative;
     margin-top: 8px;
     flex-wrap: nowrap;
-    max-width: 860px;
+    width: 860px;
     overflow-x: hidden;
-    clip-path: polygon(50 50%);
+  }
+  &__card-tags::after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 20px;
+    background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 100%
+    );
+    transform: rotate(180deg);
   }
   &__card-description {
     display: flex;
@@ -85,7 +100,7 @@
     color: $primary-text;
     font-size: 12px;
     font-weight: 400;
-		line-height: 16px;
+    line-height: 16px;
     width: 420px;
     margin: 0px 0 20px;
   }
@@ -138,8 +153,8 @@
   &__card_instagram &__card-data-item._reels .reels-info p,
   &__card_instagram &__card-data-item._video .video-info p,
   &__card_instagram &__card-data-item._photo .photo-info p {
-		display: flex;
-		align-items: center;
+    display: flex;
+    align-items: center;
     margin-top: 8px;
   }
   &__card-data-item._er .er-info p .ant-badge {
@@ -234,7 +249,7 @@
     color: #818389;
     font-size: 12px;
     margin-left: 0;
-		margin-right: 5px;
+    margin-right: 5px;
   }
   &__card_instagram &__card-bottom {
     display: flex;
