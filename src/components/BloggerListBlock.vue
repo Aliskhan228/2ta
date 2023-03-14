@@ -10,7 +10,7 @@
           </p>
           <a-button class="blogger-list__upload-button">
             <template #icon>
-              <DownloadOutlined />
+              <IconDownload />
             </template>
             Выгрузить 20 результатов
           </a-button>
@@ -39,10 +39,11 @@ import { defineComponent, onMounted, ref, nextTick } from 'vue';
 import { DownloadOutlined } from "@ant-design/icons-vue";
 import YouTubeCard from './YouTubeCard.vue';
 import InstagramCard from './InstagramCard.vue';
+import IconDownload from "./icons/IconDownload.vue";
 const count = 1;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
 export default defineComponent({
-  components: { DownloadOutlined, YouTubeCard, InstagramCard },
+  components: { DownloadOutlined, YouTubeCard, InstagramCard, IconDownload },
   setup() {
     const initLoading = ref(true);
     const loading = ref(false);
@@ -83,8 +84,3 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-.demo-loadmore-list {
-  min-height: 350px;
-}
-</style>

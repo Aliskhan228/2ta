@@ -1,6 +1,9 @@
 .blogger-list {
   padding: 0 0 44px 0;
 	background-color: $background-extra-light;
+	.demo-loadmore-list {
+		min-height: 350px;
+	}
 	&__topbar {
 		display: flex;
 		align-items: center;
@@ -12,6 +15,9 @@
 		margin-bottom: 0;
 	}
 	&__upload-button {
+		display: flex;
+		align-items: center;
+		gap: 7px;
 		font-size: $average-font-size;
 		font-weight: 600;
 		margin-left: 20px;
