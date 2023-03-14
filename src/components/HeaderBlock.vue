@@ -14,7 +14,7 @@
         <a-dropdown-button class="header__dropdown">
           prepsu.satyam
           <template #icon>
-            <UserOutlined />
+            <IconUser />
           </template>
         </a-dropdown-button>
       </div>
@@ -23,7 +23,8 @@
 </template>
 <script>
 import { UserOutlined } from "@ant-design/icons-vue";
+import IconUser from "./icons/IconUser.vue"
 export default {
-  components: { UserOutlined },
+  components: { UserOutlined, IconUser },
 };
 </script>

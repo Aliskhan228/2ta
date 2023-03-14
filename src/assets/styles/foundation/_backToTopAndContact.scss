@@ -1,0 +1,21 @@
+.ant-back-top {
+    right: 66px;
+    bottom: 96px;
+}
+.contact {
+    position: fixed;
+    right: 60px;
+    bottom: 28px;
+    height: 48px;
+    width: 48px;
+    background-color: #2382F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    svg {
+        height: 20px;
+        width: 20px;
+    }
+}

@@ -36,8 +36,10 @@
 }
 /* Tooltip width */
 .ant-tooltip-inner {
-	min-width: 580px;
+	width: max-content;
 	background-color: $primary-text;
+	border-radius: 4px;
+	padding: 6px 10px;
 }
 .verified-icon {
 	color: #41B662;

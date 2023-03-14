@@ -4,6 +4,8 @@
     <FiltersBlock />
     <FiltersTagsBlock />
     <BloggerListBlock />
+    <FooterBlock />
+    <BackToTopAndContact />
   </section>
 </template>
 <script>
@@ -11,9 +13,11 @@ import HeaderBlock from './components/HeaderBlock.vue';
 import FiltersBlock from './components/FiltersBlock.vue';
 import FiltersTagsBlock from "./components/FiltersTagsBlock.vue";
 import BloggerListBlock from './components/BloggerListBlock.vue';
+import FooterBlock from './components/FooterBlock.vue';
+import BackToTopAndContact from './components/BackToTopAndContact.vue';
 
 export default {
-  components: { HeaderBlock, FiltersBlock, FiltersTagsBlock, BloggerListBlock }
+  components: { HeaderBlock, FiltersBlock, FiltersTagsBlock, BloggerListBlock, FooterBlock, BackToTopAndContact }
 }
 
 // 1. В Filters block из под селекта тематики теперь справа вылазят нижние элементы

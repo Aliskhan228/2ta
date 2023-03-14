@@ -1,0 +1,21 @@
+.footer {
+  height: 44px;
+  background-color: #dfedff;
+  display: flex;
+  align-items: center;
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $secondary-text;
+    margin-bottom: 0;
+  }
+  &__info .logo {
+    width: 30px;
+    height: 26px;
+  }
+}

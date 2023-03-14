@@ -7,6 +7,7 @@
           <div>
             <h2>anushkasharma</h2>
             <CheckCircleFilled class="verified-icon" />
+            <DollarCircleFilled class="verified-icon" />
             <a-tooltip class="blogger-list__tooltip tooltip" placement="top">
               <template #title>
                 <span class="tooltip-text"> Убрать из выгрузки </span>
@@ -87,7 +88,10 @@
                 placement="right"
               >
                 <template #title>
-                  <span> Цена </span>
+                  <span>
+                    Цена предсказана алгоритмами <br />
+                    на основе исторических значений
+                  </span>
                 </template>
                 <InfoCircleOutlined class="tooltip-icon" />
               </a-tooltip>
@@ -100,7 +104,10 @@
                 placement="right"
               >
                 <template #title>
-                  <span> Цена </span>
+                  <span>
+                    Цена предсказана алгоритмами <br />
+                    на основе исторических значений
+                  </span>
                 </template>
                 <InfoCircleOutlined class="tooltip-icon" />
               </a-tooltip>
@@ -255,9 +262,31 @@
         <a-button class="blogger-list__card-btn blogger-list__card-btn_analise"
           >Похожие аккаунты</a-button
         >
-        <a-button class="blogger-list__card-btn blogger-list__card-btn_contacts"
-          >Контакты</a-button
-        >
+        <a-popover class="blogger-list__card-btn-popover" trigger="click">
+          <template #title>
+            <div class="blogger-list__card-btn-popove-title">Контакты</div>
+          </template>
+          <template #content>
+            <div class="blogger-list__card-btn-popove-content">
+              <p>
+                Email:
+                <a href="mailto:sample@gmail.com">sample@gmail.com</a>
+              </p>
+              <p>
+                VK:
+                <a href="https://vk.com/sample">vk.com/sample</a>
+              </p>
+              <p>
+                Telegram:
+                <a href="https://t.me/sample">t.me/sample</a>
+              </p>
+            </div>
+          </template>
+          <a-button
+            class="blogger-list__card-btn blogger-list__card-btn_contacts"
+            >Контакты</a-button
+          >
+        </a-popover>
       </div>
     </div>
 
@@ -307,6 +336,7 @@ import {
   RightOutlined,
   QuestionCircleOutlined,
   CheckCircleFilled,
+  DollarCircleFilled,
   InfoCircleOutlined,
   EyeOutlined,
   LikeOutlined,
@@ -319,6 +349,7 @@ export default {
     RightOutlined,
     QuestionCircleOutlined,
     CheckCircleFilled,
+    DollarCircleFilled,
     InfoCircleOutlined,
     EyeOutlined,
     LikeOutlined,

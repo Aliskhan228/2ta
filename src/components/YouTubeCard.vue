@@ -8,7 +8,7 @@
             <h2>FOSTI</h2>
             <a-tooltip class="blogger-list__tooltip tooltip" placement="top">
               <template #title>
-                <span class="tooltip-text"> Убрать из выгрузки </span>
+                <span class="tooltip-text">Убрать из выгрузки</span>
               </template>
               <MinusCircleTwoTone class="remove-icon" />
             </a-tooltip>
@@ -18,6 +18,12 @@
           <a-tag class="filter-tag filter-tag_green">Аниме и комиксы</a-tag>
           <a-tag class="filter-tag">Анимация</a-tag>
           <a-tag class="filter-tag">Игры</a-tag>
+          <a-tag class="filter-tag">Мультфильмы</a-tag>
+          <a-tag class="filter-tag">Мультфильмы</a-tag>
+          <a-tag class="filter-tag">Мультфильмы</a-tag>
+          <a-tag class="filter-tag">Мультфильмы</a-tag>
+          <a-tag class="filter-tag">Мультфильмы</a-tag>
+          <a-tag class="filter-tag">Мультфильмы</a-tag>
           <a-tag class="filter-tag">Мультфильмы</a-tag>
         </div>
       </div>
@@ -32,7 +38,7 @@
         </div>
         <a-popover class="blogger-list__card-popover" placement="left">
           <template #title>
-            <div class="blogger-list__card-popover-title"><b>О блогере</b></div>
+            <div class="blogger-list__card-popover-title">О блогере</div>
           </template>
           <template #content>
             <div class="blogger-list__card-popover-text">
@@ -110,7 +116,8 @@
           <a-tooltip class="blogger-list__tooltip tooltip" placement="right">
             <template #title>
               <span>
-                Цена предсказана алгоритмами на основе исторических значений
+                Цена предсказана алгоритмами <br />
+                на основе исторических значений
               </span>
             </template>
             <InfoCircleOutlined class="tooltip-icon" />
@@ -131,9 +138,31 @@
         <a-button class="blogger-list__card-btn blogger-list__card-btn_analise"
           >Полный анализ</a-button
         >
-        <a-button class="blogger-list__card-btn blogger-list__card-btn_contacts"
-          >Контакты</a-button
-        >
+        <a-popover class="blogger-list__card-btn-popover" trigger="click">
+          <template #title>
+            <div class="blogger-list__card-btn-popove-title">Контакты</div>
+          </template>
+          <template #content>
+            <div class="blogger-list__card-btn-popove-content">
+              <p>
+                Email:
+                <a href="mailto:sample@gmail.com">sample@gmail.com</a>
+              </p>
+              <p>
+                VK:
+                <a href="https://vk.com/sample">vk.com/sample</a>
+              </p>
+              <p>
+                Telegram:
+                <a href="https://t.me/sample">t.me/sample</a>
+              </p>
+            </div>
+          </template>
+          <a-button
+            class="blogger-list__card-btn blogger-list__card-btn_contacts"
+            >Контакты</a-button
+          >
+        </a-popover>
       </div>
     </div>
   </a-card>

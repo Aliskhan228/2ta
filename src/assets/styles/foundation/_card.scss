@@ -5,7 +5,7 @@
   }
   // YouTube Card
   &__card {
-    padding: 16px 64px 20px 20px;
+    padding: 16px 20px 20px 20px;
     margin-top: 16px;
     border-radius: 8px;
 		border: none;
@@ -44,18 +44,23 @@
 	}
   &__card-tags {
     margin-top: 8px;
+    flex-wrap: nowrap;
+    max-width: 860px;
+    overflow-x: hidden;
+    clip-path: polygon(50 50%);
   }
   &__card-description {
     display: flex;
     align-items: center;
-    max-width: 340px;
-    width: 100%;
     margin-left: auto;
     overflow: hidden;
+    background-color: #fff;
   }
   &__card-description-text {
     height: 50px;
     line-height: 16px;
+    width: 352px;
+    background-color: #fff;
     overflow: hidden;
     color: transparent;
     -webkit-background-clip: text;
@@ -68,7 +73,7 @@
     );
   }
   &__card-popover {
-    width: 340px;
+    margin-left: 9px;
   }
   &__card-popover-title {
     color: $primary-text;
@@ -77,10 +82,12 @@
     margin: 12px 0;
   }
   &__card-popover-text {
+    color: $primary-text;
     font-size: 12px;
     font-weight: 400;
 		line-height: 16px;
     width: 420px;
+    margin: 0px 0 20px;
   }
   &__card-data {
     display: flex;
@@ -166,6 +173,23 @@
     border-radius: 4px;
     padding: 0 17px;
   }
+  &__card-btn-popove-title {
+    color: $primary-text;
+    font-size: $average-font-size;
+    font-weight: 600;
+    margin: 12px 0;
+  }
+  &__card-btn-popove-content {
+    width: 188px;
+  }
+  &__card-btn-popove-content p {
+    font-size: $average-font-size;
+    font-weight: 400;
+    color: $primary-text;
+  }
+  &__card-btn-popove-content p a {
+    color: $main-primary;
+  }
   &__card-btn.ant-btn-primary {
     background-color: #2382f7;
   }
@@ -175,9 +199,6 @@
     gap: 7px;
   }
   // Instagram Card
-  &__card_instagram {
-    padding: 16px 20px 20px 20px;
-  }
   &__card_instagram &__card-data {
     flex-direction: column-reverse;
   }
